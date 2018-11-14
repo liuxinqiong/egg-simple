@@ -9,5 +9,22 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.tpl': 'nunjucks'
+    }
+  }
+
+  config.middleware = [
+    'robot'
+  ]
+
+  config.robot = {
+    ua: [
+      /Baiduspider/i
+    ]
+  }
+
   return config;
 };
