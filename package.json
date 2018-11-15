@@ -6,6 +6,7 @@
   "dependencies": {
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
+    "egg-validate": "^2.0.2",
     "egg-view-nunjucks": "^2.2.0",
     "moment": "^2.22.2"
   },
@@ -27,13 +28,12 @@
     "stop": "egg-scripts stop --title=egg-server-egg-simple",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "test": "npm run lint -- --fix && npm run test-local",
+    "test": "egg-bin test",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod",
-    "test": "egg-bin test"
+    "autod": "autod"
   },
   "ci": {
     "version": "8"
